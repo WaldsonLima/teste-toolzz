@@ -1,0 +1,123 @@
+.formLogin_main {
+    width: 35%;
+}
+
+.main_container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 56px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.btn_create_account {
+    color: #0761E2;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+    cursor: pointer;
+}
+
+.welcome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+}
+
+.welcome_title {
+    font-family: "Inter", sans-serif;
+    color: #0E0E0E;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44.8px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.welcome_description {
+    font-family: "Inter", sans-serif;
+    color: #585858;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.login_icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.icon_container {
+    width: 137px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #151515;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.icon_container:hover {
+    background-color: #f3f3f3;
+}
+
+.diviver_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.divider {
+    width: 40%;
+    height: 1px;
+    color: #0000001a;
+    background-color: #0000001a;
+    margin: 0;
+}
+
+.text_divider {
+    font-family: "Inter", sans-serif;
+    color: #585858;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+}
+
+.forget_password_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget_password_text {
+    font-family: "Inter", sans-serif;
+    color: #585858;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.forget_password_link {
+    color: #0761E2;
+    margin-left: 4px;
+    cursor: pointer;
+}

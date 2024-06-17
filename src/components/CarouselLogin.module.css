@@ -1,0 +1,57 @@
+.carousel_main {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chip_container {
+    margin-bottom: 24px;
+}
+
+.carousel_title {
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33.6px;
+}
+
+.carousel_description {
+    color: #909090;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_container {
+    width: 88px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons {
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.icons:hover {
+    color: #d6d6d6;
+}
+
+.icons_disabled {
+    color: #3A3A3A;
+    cursor: default;
+}
