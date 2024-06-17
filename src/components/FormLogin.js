@@ -1,62 +1,75 @@
 import styles from './FormLogin.module.css';
 import toolz from '../img/Toolz.svg';
+import toolsDark from '../img/ToolzDark.svg';
 import logoToolzOutlined from '../img/logoToolzOutlined.svg';
+import logoToolzOutlinedDark from  '../img/logoToolzOutlinedDark.svg';
 import { FaFacebook, FaApple, FaTwitter } from "react-icons/fa";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import InputsLogin from './InputsLogin';
+import { SectionFormLogin, TextPrimary, TextSecond, LoginIconContainer, Divider, IconToolz, CircleiconPrev, TextCreateAccount, HeaderMobile } from '../styles'
 
-function FormLogin() {
+function FormLogin({theme}) {
     return (
-        <section className={styles.formLogin_main}>
+        <SectionFormLogin className={styles.formLogin_main}>
+            <HeaderMobile className={styles.header_mobile}>
+                <CircleiconPrev className={styles.circle_icon_prev}>
+                    <MdKeyboardArrowLeft size={32}/>
+                </CircleiconPrev>
+                <TextCreateAccount className={styles.text_create_account}>
+                    Criar conta
+                </TextCreateAccount>
+            </HeaderMobile>
+            <Divider className={styles.divider_header} />
             <div className={styles.main_container}>
                 <div className={styles.header}>
-                    <img src={toolz} />
+                    <img src={(theme === 'light' ? toolz : toolsDark)} />
                     <a className={styles.btn_create_account}>
                         Criar conta
                     </a>
                 </div>
                 <div className={styles.welcome}>
-                    <p className={styles.welcome_title}>
+                    <TextPrimary className={styles.welcome_title}>
                         Boas-vindas!
-                    </p>
-                    <p className={styles.welcome_description}>
+                    </TextPrimary>
+                    <TextSecond className={styles.welcome_description}>
                         Entre utilizando uma das opções abaixo
-                    </p>
+                    </TextSecond>
                 </div>
                 <div className={styles.login_icons}>
-                    <div className={styles.icon_container}>
-                        <img
+                    <LoginIconContainer className={styles.icon_container}>
+                        <IconToolz
                             sizes='18px'
-                            src={logoToolzOutlined}
+                            src={(theme === 'light' ? logoToolzOutlined : logoToolzOutlinedDark)}
                         />
-                    </div>
-                    <div className={styles.icon_container}>
+                    </LoginIconContainer>
+                    <LoginIconContainer className={styles.icon_container}>
                         <FaFacebook size={18} />
-                    </div>
-                    <div className={styles.icon_container}>
+                    </LoginIconContainer>
+                    <LoginIconContainer className={styles.icon_container}>
                         <FaApple size={18} />
-                    </div>
-                    <div className={styles.icon_container}>
+                    </LoginIconContainer>
+                    <LoginIconContainer className={styles.icon_container}>
                         <FaTwitter size={18} />
-                    </div>
+                    </LoginIconContainer>
                 </div>
                 <div className={styles.diviver_container}>
-                    <div className={styles.divider} />
-                    <span className={styles.text_divider}>
+                    <Divider className={styles.divider} />
+                    <TextSecond className={styles.text_divider}>
                         ou
-                    </span>
-                    <div className={styles.divider} />
+                    </TextSecond>
+                    <Divider className={styles.divider} />
                 </div>
                 <InputsLogin />
                 <div className={styles.forget_password_container}>
-                    <p className={styles.forget_password_text}>
+                    <TextSecond className={styles.forget_password_text}>
                         Esqueceu sua senha?
                         <a className={styles.forget_password_link}>
                             Recuperar senha
                         </a>
-                    </p>
+                    </TextSecond>
                 </div>
             </div>
-        </section>
+        </SectionFormLogin>
     )
 }
 

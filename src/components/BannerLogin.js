@@ -1,9 +1,12 @@
 import styles from './BannerLogin.module.css';
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { FaRegMoon } from "react-icons/fa";
+import { FaRegMoon, FaMoon } from "react-icons/fa";
 import CarouselLogin from './CarouselLogin';
 
-function BannerLogin() {
+function BannerLogin({theme, setTheme}) {
+    const themeToggler = () => {
+        theme === 'light' ? setTheme('dark') : setTheme('light');
+    };
     return (
         <section className={styles.bannerLogin_main}>
             <div className={styles.main_background_container}>
@@ -14,11 +17,11 @@ function BannerLogin() {
                             className={styles.icon}
                         />
                     </div>
-                    <div className={styles.circle_icon}>
-                        <FaRegMoon
-                            size={20}
-                            className={styles.icon}
-                        />
+                    <div
+                        className={(theme === 'light' ? styles.circle_icon : styles.circle_icon__darkMode)}
+                        onClick={themeToggler}
+                    >
+                        <ThemeIcon theme={theme} />
                     </div>
                 </div>
                 <div className={styles.footer}>
@@ -27,6 +30,22 @@ function BannerLogin() {
             </div>
         </section>
     )
+}
+
+function ThemeIcon({theme}) {
+    if(theme === 'light') {
+        return(
+            <FaRegMoon
+                size={20}
+                className={styles.icon}
+            />
+        );
+    } else return(
+        <FaMoon
+            size={20}
+            className={styles.icon__darkMode}
+        />
+    );
 }
 
 export default BannerLogin;

@@ -5,3 +5,14 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+@media (max-width: 1200px) {
+    .login_main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner_login {
+        display: none;
+    }   
+}
