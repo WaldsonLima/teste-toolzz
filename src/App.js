@@ -13,8 +13,19 @@ function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path='/' element={<Login theme={theme} setTheme={setTheme} />} />
-          <Route path='/home' element={<Home/>} />
+          <Route
+            path='/'
+            element={
+              <Login
+                theme={theme}
+                setTheme={setTheme}
+              />
+            }
+          />
+          <Route
+            path='/home'
+            element={<Home/>}
+          />
         </Routes>
       </Router>
     </ThemeProvider>
